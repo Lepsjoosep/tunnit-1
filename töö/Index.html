@@ -1,0 +1,243 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tunnitöö</title>
+    <style>
+        
+        body {
+            background: url('https://webcms.tpilet.ee/static/taustapilt.jpg') center/cover no-repeat fixed;
+        }
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
+
+        
+        header {
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .sõiduplaanid:hover {
+            color: orangered;
+            border-bottom: solid orangered;
+            border-width: 2px;
+            padding-bottom: 30px;
+        }
+        .piletit:hover {
+            color: orangered;
+            border-bottom: solid orangered;
+            border-width: 2px;
+            padding-bottom: 30px;
+        }
+        .ari:hover {
+            color: orangered;
+            border-bottom: solid orangered;
+            border-width: 2px;
+            padding-bottom: 30px;
+        }
+        .uudised:hover {
+            color: orangered;
+            border-bottom: solid orangered;
+            border-width: 2px;
+            padding-bottom: 30px;
+        }
+        .info:hover {
+            color: orangered;
+            border-bottom: solid orangered;
+            border-width: 2px;
+            padding-bottom: 30px;
+        }
+
+        header .nav-links {
+            margin-bottom: 20px;
+        }
+
+        header .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        header h1 {
+            color: #ff6600;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 0px;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .trip-type {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+
+        .trip-type button {
+            background-color: transparent;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            color: #ff6600;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .edasitagasinupp:hover {
+            color: orangered;
+            border-bottom: solid orangered;
+            border-width: 2px;
+        }
+
+        .trip-type button.active {
+            border-bottom: 2px solid #ff6600;
+        }
+
+        .trip-type button:hover {
+            color: #e65a00;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            font-size: 12px;
+        }
+
+        input[type="text"], input[type="date"] {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 175px;
+            align-self: center;
+            height: 55px;
+        }
+
+        .search-btn:hover {
+            background-color: #e65a00;
+        }
+
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>tunnitöö</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/tpilet.png" width="120px" alt="Tpilet" />
+            </div>
+            <nav>
+                <ul style="text-align: center; ">
+                    <li id=""><a href="#ostapilet" style="color: orangered; font-size: large; border-bottom: orangered; border-bottom: solid; padding-bottom: 30px; border-width: 2px;">Osta pilet</a></li>
+                    <li><a href="#Sõiduplaanid" style="color: gray;font-size: large;" class="sõiduplaanid">Sõiduplaanid</a></li>
+                    <li><a href="#Piletitagastamine" style="color: gray;font-size: large;" class="piletit">Pileti tagastamine</a></li>
+                    <li><a href="#Ärikliendileping" style="color: gray;font-size: large;" class="ari">Ärikliendileping
+                    <li><a href="#Uudised" style="color: gray;font-size: large;" class="uudised">Uudised</a></li>
+                    <li><a href="#Info" style="color: gray;font-size: large;" class="info">Info</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="kontakt" >
+                <img src="images/download.png" alt="helista" style="width: 30px; position: absolute;right: 185px; top: 18px; opacity: 0.5; ">
+                <a href="tel:12550" style="position:absolute; right: 150px; top: 20px; opacity: 0.8;">12550</a>
+                <img src="images/download (1).png" alt="" style="width: 20px; position: absolute ;right: 240px; top: 42px; opacity: 0.5;">
+                <a href="mailto:info@tpilet.ee" style="position: absolute; right: 150px; top: 40px; opacity: 0.8;">info@tpilet.ee</a>
+                <div class="vl"></div>
+                <div class="keeled">
+                    <a href="#" class="active">ET</a>
+                    <a href="#">RU</a>
+                    <a href="#">EN</a>
+                </div>
+            </div>
+        </header>
+    </style>
+    <div class="header-text">Osta bussipilet</div>
+    <div class="centered-container">
+        <div class="form-container">
+            <form action="#">
+                <div class="trip-type">
+                    <button type="button" class="active">ÜKS SUUND</button>
+                    <button type="button" class="edasitagasinupp">EDASI-TAGASI</button>
+                </div>
+
+                <label for="departure"></label>
+                <input type="text" id="departure" name="departure" placeholder="Lähtepeatus">
+
+                <label for="destination"></label>
+                <input type="text" id="destination" name="destination" placeholder="Sihtpeatus">
+
+                <label for="date"></label>
+                <input type="date" id="date" name="date" value="#" style="font-family: sans-serif;">
+
+                <button type="submit" class="search-btn">OTSI REISE</button>
+            </form>
+                <h2 style="color: black;font-family: sans-serif; font-size: medium;" >POPULAARSED SUUNAD</h2>
+                <ul style="list-style: none; font-size: smaller; column-count: 2; column-gap: 100px ;" id="Suunad" >
+                    <li><a href="#" style="color:  gray; text-decoration: none;" >Tallinn > Tartu</a></li>
+                    <li><a href="#" style="color: gray;text-decoration: none;">Tallinn > Pärnu</a></li>
+                    <li><a href="#" style="color: gray;text-decoration: none;">Tallinn > Narva</a></li>
+                    <li><a href="#" style="color: gray;text-decoration: none;">Tallinn > Viljandi</a></li>
+                    <li><a href="#" style="color: gray;text-decoration: none;">Tartu > Tallinn</a></li>
+                    <li><a href="#" style="color: gray;text-decoration: none;">Pärnu > Tallinn</a></li>
+                    <li><a href="#" style="color: gray;text-decoration: none;">Narva > Tallinn</a></li>
+                    <li><a href="#" style="color: gray;text-decoration: none;">Viljandi > Tallinn</a></li>
+                </ul>
+        </div>
+
+
+</body>
+</html>
+
